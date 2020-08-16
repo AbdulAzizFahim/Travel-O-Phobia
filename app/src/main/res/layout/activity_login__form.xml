@@ -65,7 +65,6 @@
         android:id="@+id/login"
         android:textColor="#ffffff"
         android:layout_marginTop="40dp"
-        android:onClick="gotohome"
         android:background="@drawable/button_round"/>
 
     <Button
