@@ -46,6 +46,4 @@ public class Login_Form extends AppCompatActivity {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
-
-
 }
