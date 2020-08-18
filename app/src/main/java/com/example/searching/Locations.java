@@ -31,10 +31,10 @@ public class Locations extends AppCompatActivity {
     }
     private void fillExampleList() {
         exampleList = new ArrayList<>();
-        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Cox's Bazar", "Ten"));
-        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Sundarban", "Eleven"));
-        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Sylhet", "Twelve"));
-        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Saint Martins", "Thirteen"));
+        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Cox's Bazar", ""));
+        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Sundarban", ""));
+        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Sylhet", ""));
+        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Saint Martins", ""));
         /*exampleList.add(new exampleItem(R.drawable.ic_audio, "Five", "Fourteen"));
         exampleList.add(new exampleItem(R.drawable.ic_sun, "Six", "Fifteen"));
         exampleList.add(new exampleItem(R.drawable.ic_android, "Seven", "Sixteen"));

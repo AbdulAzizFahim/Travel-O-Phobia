@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
     }
     private void fillExampleList() {
         exampleList = new ArrayList<>();
-        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "One", "Ten"));
-        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Two", "Eleven"));
+        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Bangladesh", "The Bay of Bengal"));
+        exampleList.add(new exampleItem(R.drawable.ic_android_black_24dp, "Singapore", "The country with Technologies"));
         /*exampleList.add(new exampleItem(R.drawable.ic_sun, "Three", "Twelve"));
         exampleList.add(new exampleItem(R.drawable.ic_android, "Four", "Thirteen"));
         exampleList.add(new exampleItem(R.drawable.ic_audio, "Five", "Fourteen"));

@@ -28,7 +28,7 @@ public class Location_Pros extends AppCompatActivity {
         setContentView(R.layout.activity_location__pros);
 
 
-        ProsTextView = (TextView) findViewById(R.id.ProsText1);
+        ProsTextView = (TextView) findViewById(R.id.textView4);
         ProsTextView.setMovementMethod(new ScrollingMovementMethod());
 
         ProsLocationName = (TextView) findViewById(R.id.textView2);
@@ -56,12 +56,12 @@ public class Location_Pros extends AppCompatActivity {
             ProsLocationName.setText("Pros of Saint Martins Tourism Spot");
             is = this.getResources().openRawResource(R.raw.saint_martin_text_pros);
         }
-        if(LocProInf.equals("Sundarbans"))
+        else if(LocProInf.equals("Sundarbans"))
         {
             ProsLocationName.setText("Pros of Sundarbans Tourism Spot");
             is = this.getResources().openRawResource(R.raw.sundarbans_text_pros);
         }
-        if(LocProInf.equals("Sylhet"))
+        else if(LocProInf.equals("Sylhet"))
         {
             ProsLocationName.setText("Pros of Sylhet Tourism Spot");
             is = this.getResources().openRawResource(R.raw.sylhet_text_pros);

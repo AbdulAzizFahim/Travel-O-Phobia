@@ -5,23 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".Location_Activity">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
-
-
-    <ImageView
-        android:id="@+id/Location_Image"
-        android:scaleType="fitXY"
-        android:src="@mipmap/ic_launcher"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_height="match_parent"
+        android:background="#00BCD4"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/Location_Image"
+            android:layout_width="match_parent"
+            android:layout_height="361dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/Location_Name_Text"
@@ -34,53 +35,51 @@
             android:textStyle="bold" />
 
 
-    <TextView
-        android:id="@+id/Location_Description_Text"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="15dp" />
+        <TextView
+            android:id="@+id/Location_Description_Text"
+            android:layout_width="412dp"
+            android:layout_height="86dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp" />
 
+        <Button
+            android:id="@+id/Pros_Button"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Pros" />
 
-    <Button
-        android:id="@+id/Pros_Button"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="Pros" />
+        <Button
+            android:id="@+id/Cons_Button"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="Cons" />
 
-    <Button
-        android:id="@+id/Cons_Button"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:text="Cons" />
+        <Button
+            android:id="@+id/Trip_Review_Button"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="Trip Review" />
 
-    <Button
-        android:id="@+id/Trip_Review_Button"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:text="Trip Review" />
+        <Button
+            android:id="@+id/Bus_Reserve_Button"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="Bus Reservation" />
 
-    <Button
-        android:id="@+id/Bus_Reserve_Button"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:text="Bus Reservation" />
-
-    <Button
-        android:id="@+id/Hotel_Book_Button"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:text="Book Hotel"
-        android:layout_marginBottom="10dp"
-        />
+        <Button
+            android:id="@+id/Hotel_Book_Button"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="Book Hotel" />
 
     </LinearLayout>
 

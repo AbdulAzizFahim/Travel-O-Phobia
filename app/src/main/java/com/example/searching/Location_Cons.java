@@ -28,7 +28,7 @@ public class Location_Cons extends AppCompatActivity {
         setContentView(R.layout.activity_location__cons);
 
 
-        ConsTextView = (TextView) findViewById(R.id.ConsText1);
+        ConsTextView = (TextView) findViewById(R.id.textView4);
         ConsTextView.setMovementMethod(new ScrollingMovementMethod());
 
         ConsLocationName = (TextView) findViewById(R.id.textView3);

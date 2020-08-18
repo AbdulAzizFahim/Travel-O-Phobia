@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="#00BCD4"
     android:orientation="vertical"
     android:padding="30dp"
     tools:context=".Signup_Form">
@@ -12,9 +12,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="395dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:layout_marginTop="5dp"
 
 
         >
@@ -22,8 +22,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="Full Name"
-            android:ems="10"
             android:inputType="text"
             android:textSize="22sp"
 
@@ -33,9 +33,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="395dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:layout_marginTop="5dp"
 
 
         >
@@ -43,8 +43,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="User Name"
-            android:ems="10"
             android:inputType="text"
             android:textSize="22sp"
 
@@ -54,9 +54,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="395dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:layout_marginTop="5dp"
 
 
         >
@@ -64,8 +64,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
             android:ems="10"
+            android:hint="Email"
             android:inputType="textEmailAddress"
             android:textSize="22sp"
 
@@ -75,17 +75,17 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="395dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:layout_marginTop="5dp"
 
         >
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
             android:ems="10"
+            android:hint="Password"
             android:inputType="textPassword"
             android:textSize="22sp"
 
@@ -95,9 +95,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="395dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:layout_marginTop="5dp"
 
 
         >
@@ -105,8 +105,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password"
             android:ems="10"
+            android:hint="Confirm Password"
             android:inputType="textPassword"
             android:textSize="22sp"
 
@@ -117,11 +117,11 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Register"
-        android:textSize="22sp"
-        android:textColor="#ffffff"
         android:layout_marginTop="40dp"
+        android:background="@drawable/button_round"
         android:onClick="gotologin"
-        android:background="@drawable/button_round"/>
+        android:text="Register"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
 
 </LinearLayout>
