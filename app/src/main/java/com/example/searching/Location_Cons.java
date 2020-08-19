@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -14,6 +15,8 @@ public class Location_Cons extends AppCompatActivity {
     String consString,placeName;
 
     TextView ConsTextView,ConsLocationName;
+
+    ImageView consSignView;
 
     BufferedReader reader;
 
@@ -27,11 +30,13 @@ public class Location_Cons extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location__cons);
 
+        consSignView = (ImageView) findViewById(R.id.consSignView);
+        consSignView.setImageResource(R.drawable.cons);
 
-        ConsTextView = (TextView) findViewById(R.id.textView4);
+        ConsTextView = (TextView) findViewById(R.id.consDescription);
         ConsTextView.setMovementMethod(new ScrollingMovementMethod());
 
-        ConsLocationName = (TextView) findViewById(R.id.textView3);
+        ConsLocationName = (TextView) findViewById(R.id.consPlace);
         consString = "";
 
         Bundle bundle = getIntent().getExtras();
@@ -48,22 +53,22 @@ public class Location_Cons extends AppCompatActivity {
     {
         if(LocProInf.equals("Cox's Bazar"))
         {
-            ConsLocationName.setText("Cons of Cox's Bazar Tourism Spot");
+            ConsLocationName.setText("Cox's Bazar Tourism Spot");
             is = this.getResources().openRawResource(R.raw.cox_text_cons);
         }
         else if(LocProInf.equals("Saint Martins"))
         {
-            ConsLocationName.setText("Cons of Saint Martins Tourism Spot");
+            ConsLocationName.setText("Saint Martins Tourism Spot");
             is = this.getResources().openRawResource(R.raw.saint_martin_text_cons);
         }
         if(LocProInf.equals("Sundarbans"))
         {
-            ConsLocationName.setText("Cons of Sundarbans Tourism Spot");
+            ConsLocationName.setText("Sundarbans Tourism Spot");
             is = this.getResources().openRawResource(R.raw.sundarbans_text_cons);
         }
         if(LocProInf.equals("Sylhet"))
         {
-            ConsLocationName.setText("Cons of Sylhet Tourism Spot");
+            ConsLocationName.setText("Sylhet Tourism Spot");
             is = this.getResources().openRawResource(R.raw.sylhet_text_cons);
         }
 

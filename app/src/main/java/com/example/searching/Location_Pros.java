@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -14,6 +16,8 @@ public class Location_Pros extends AppCompatActivity {
     String prosString,placeName;
 
     TextView ProsTextView,ProsLocationName;
+
+    ImageView prosSignView;
 
     BufferedReader reader;
 
@@ -27,11 +31,13 @@ public class Location_Pros extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location__pros);
 
+        prosSignView = (ImageView) findViewById(R.id.prosSignView);
+        prosSignView.setImageResource(R.drawable.pros);
 
-        ProsTextView = (TextView) findViewById(R.id.textView4);
+        ProsTextView = (TextView) findViewById(R.id.prosDescription);
         ProsTextView.setMovementMethod(new ScrollingMovementMethod());
 
-        ProsLocationName = (TextView) findViewById(R.id.textView2);
+        ProsLocationName = (TextView) findViewById(R.id.prosPlace);
         prosString = "";
 
         Bundle bundle = getIntent().getExtras();
@@ -48,22 +54,22 @@ public class Location_Pros extends AppCompatActivity {
     {
         if(LocProInf.equals("Cox's Bazar"))
         {
-            ProsLocationName.setText("Pros of Cox's Bazar Tourism Spot");
+            ProsLocationName.setText("Cox's Bazar Tourism Spot");
             is = this.getResources().openRawResource(R.raw.cox_text_pros);
         }
         else if(LocProInf.equals("Saint Martins"))
         {
-            ProsLocationName.setText("Pros of Saint Martins Tourism Spot");
+            ProsLocationName.setText("Saint Martins Tourism Spot");
             is = this.getResources().openRawResource(R.raw.saint_martin_text_pros);
         }
         else if(LocProInf.equals("Sundarbans"))
         {
-            ProsLocationName.setText("Pros of Sundarbans Tourism Spot");
+            ProsLocationName.setText("Sundarbans Tourism Spot");
             is = this.getResources().openRawResource(R.raw.sundarbans_text_pros);
         }
         else if(LocProInf.equals("Sylhet"))
         {
-            ProsLocationName.setText("Pros of Sylhet Tourism Spot");
+            ProsLocationName.setText("Sylhet Tourism Spot");
             is = this.getResources().openRawResource(R.raw.sylhet_text_pros);
         }
 
