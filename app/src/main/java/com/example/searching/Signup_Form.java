@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Signup_Form extends AppCompatActivity {
 
@@ -25,6 +26,7 @@ public class Signup_Form extends AppCompatActivity {
 
     public void gotologin(View view) {
 
+        Toast.makeText(getApplicationContext(),"Succesfully Registered",Toast.LENGTH_SHORT).show();
         startActivity(new Intent(getApplicationContext(),Login_Form.class));
     }
 }
