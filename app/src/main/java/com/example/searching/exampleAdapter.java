@@ -3,120 +3,70 @@ package com.example.searching;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.bumptech.glide.Glide;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-public class exampleAdapter extends RecyclerView.Adapter<exampleAdapter.ExampleViewHolder> implements Filterable {
-    private ArrayList<exampleItem> mExampleList;
-    private ArrayList<exampleItem> mExampleListFull;
+import de.hdodenhof.circleimageview.CircleImageView;
 
-    private onItemClickListener mListener;
+public class exampleAdapter extends FirebaseRecyclerAdapter<modelC,exampleAdapter.myviewholder>
+{
+    private OnNoteListener mOnNoteListener;
+    public exampleAdapter(@NonNull FirebaseRecyclerOptions<modelC> options , OnNoteListener onNoteListener) {
+        super(options);
+        this.mOnNoteListener = onNoteListener;
 
-
-    public interface onItemClickListener{
-        void onItemClick(int position);
-    }
-    public void setOnItemClickListener(onItemClickListener listener){
-       mListener = listener;
     }
 
+    @Override
+    protected void onBindViewHolder(@NonNull myviewholder holder, int position, @NonNull modelC model)
+    {
+        holder.name.setText(model.getName());
+        holder.details.setText(model.getDetails());
+        Glide.with(holder.img.getContext()).load(model.getPurl()).into(holder.img);
 
 
-
-    public static  class  ExampleViewHolder extends  RecyclerView.ViewHolder{
-
-        public ImageView mImageView;
-        public TextView mTextView1;
-        public TextView mTextView2;
-
-
-        public ExampleViewHolder(@NonNull View itemView, final onItemClickListener listener) {
-            super(itemView);
-            mImageView = itemView.findViewById((R.id.imageView));
-            mTextView1 = itemView.findViewById(R.id.textView1);
-            mTextView2 = itemView.findViewById(R.id.textView2);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                        if(listener !=null){
-                            int position = getAdapterPosition();
-                            if(position != RecyclerView.NO_POSITION){
-                                listener.onItemClick(position);
-                            }
-                        }
-                }
-            });
-        }
-    }
-    public exampleAdapter(ArrayList<exampleItem> exampleList) {
-        mExampleList = exampleList;
-        mExampleListFull = new ArrayList<>(exampleList);
     }
 
     @NonNull
     @Override
-    public ExampleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item, parent, false);
-        ExampleViewHolder evh = new ExampleViewHolder(v,mListener);
-        return evh;
+    public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    {
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item,parent,false);
+        return new myviewholder(view,mOnNoteListener);
     }
 
+    class myviewholder extends RecyclerView.ViewHolder implements View.OnClickListener
+    {
+        CircleImageView img;
+        TextView name,details;
+        OnNoteListener oniChan;
 
-    @Override
-    public void onBindViewHolder(@NonNull ExampleViewHolder holder, int position) {
-        exampleItem currentItem = mExampleList.get(position);
-        holder.mImageView.setImageResource(currentItem.getImageResource());
-        holder.mTextView1.setText(currentItem.getText1());
-        holder.mTextView2.setText(currentItem.getText2());
-    }
+        public myviewholder(@NonNull View itemView , OnNoteListener oni)
+        {
+            super(itemView);
+            img=(CircleImageView)itemView.findViewById(R.id.imageView);
+            name=(TextView)itemView.findViewById(R.id.textView1);
+            details=(TextView)itemView.findViewById(R.id.textView2);
+            itemView.setOnClickListener(this);
+            this.oniChan = oni;
 
-
-    @Override
-    public int getItemCount() {
-        return mExampleList.size();
-    }
-
-    @Override
-    public Filter getFilter() {
-        return exampleFilter;
-    }
-
-    private Filter exampleFilter =  new Filter(){
-
-        @Override
-        protected FilterResults performFiltering(CharSequence constraint) {
-            List<exampleItem> filteredList = new ArrayList<>();
-            if(constraint == null || constraint.length() == 0){
-                filteredList.addAll(mExampleListFull);
-
-            }else{
-                String filterPattern = constraint.toString().toLowerCase().trim();
-                for(exampleItem item : mExampleListFull){
-                    if(item.getText1().toLowerCase().contains(filterPattern))
-                        filteredList.add(item);
-                }
-            }
-            FilterResults results  = new FilterResults();
-            results.values = filteredList;
-            return results;
         }
 
         @Override
-        protected void publishResults(CharSequence constraint, FilterResults results) {
-                mExampleList.clear();
-                mExampleList.addAll((List)results.values);
-                notifyDataSetChanged();
+        public void onClick(View v) {
+            oniChan.onNoteClick(getAdapterPosition());
         }
-    };
+    }
+    public interface  OnNoteListener{
+        void onNoteClick(int position);
+    }
+
 
 }

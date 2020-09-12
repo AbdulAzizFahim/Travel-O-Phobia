@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "998835655859",
+    "firebase_url": "https://travel-o-phobia.firebaseio.com",
+    "project_id": "travel-o-phobia",
+    "storage_bucket": "travel-o-phobia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998835655859:android:505224dd5f96753591ccc6",
+        "android_client_info": {
+          "package_name": "com.example.searching"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998835655859-fc87j00q8q4mtlodlum44pj77inavukh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.searching",
+            "certificate_hash": "19bcc13c2b4426e9cad947a47920f5d4186407b4"
+          }
+        },
+        {
+          "client_id": "998835655859-48eccd6koblihhocpt557uvv65fq2nch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.searching",
+            "certificate_hash": "d1b0c6e8fe20257de60db373db2c5e953a77438f"
+          }
+        },
+        {
+          "client_id": "998835655859-ckm3la1rmhoj10b2udos6mvakgqtam7m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.searching",
+            "certificate_hash": "b9146f4321f23d0e7f3e82321f13e17117bf07f5"
+          }
+        },
+        {
+          "client_id": "998835655859-4vacalmhccek57ddto4hrv6ars3hp8ii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJVrsi-6JRMMbcZb7c-z6PAVOzVSzK1ms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998835655859-4vacalmhccek57ddto4hrv6ars3hp8ii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
