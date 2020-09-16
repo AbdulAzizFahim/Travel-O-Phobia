@@ -23,6 +23,8 @@ import java.util.List;
 public class Locations extends AppCompatActivity implements  exampleAdapter.OnNoteListener {
     RecyclerView recview;
     exampleAdapter adapter;
+    String name,pass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,12 @@ public class Locations extends AppCompatActivity implements  exampleAdapter.OnNo
 
         adapter = new exampleAdapter(options,this);
         recview.setAdapter(adapter);
+        Bundle bundle = getIntent().getExtras();
+
+        if(bundle!=null){
+
+            name = bundle.getString("name");
+        }
 
     }
 
@@ -59,6 +67,7 @@ public class Locations extends AppCompatActivity implements  exampleAdapter.OnNo
 
         Intent intent = new Intent(this,Location_Activity.class);
         intent.putExtra("Location_Name" , adapter.getItem(position).getName());
+        intent.putExtra("name" , name);
         startActivity(intent);
 
     }

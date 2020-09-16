@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAppBackground"
+    android:background="#F9FAFA"
     android:orientation="vertical"
 
     tools:context=".Login_Form">
 
     <ImageView
+        android:id="@+id/logo"
         android:layout_width="match_parent"
+
+
         android:layout_height="280dp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -61,11 +64,11 @@
         android:textSize="22sp" />
 
     <Button
-        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_round"
+        android:onClick="signup_form"
         android:text="SignUp"
         android:textColor="#ffffff"
         android:textSize="22sp" />
