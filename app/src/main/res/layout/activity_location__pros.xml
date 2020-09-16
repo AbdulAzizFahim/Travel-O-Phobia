@@ -20,9 +20,9 @@
             android:src="@mipmap/ic_launcher"
             android:scaleType="fitXY"
             android:layout_width="400dp"
-            android:layout_height="207dp"
+            android:layout_height="265dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="616dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -35,10 +35,10 @@
         <TextView
             android:id="@+id/prosPlace"
             android:layout_width="410dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_marginTop="211dp"
             android:layout_marginEnd="13dp"
-            android:layout_marginBottom="457dp"
+            android:layout_marginBottom="460dp"
             android:paddingTop="20dp"
             android:textAlignment="center"
             android:textColor="@color/colorBlack"
@@ -52,19 +52,93 @@
 
 
         <TextView
-            android:id="@+id/prosDescription"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginTop="380dp"
-            android:textColor="@color/colorBlack"
-            android:textSize="25dp"
-            android:textAlignment="center"
-            android:paddingTop="10dp"
+            android:layout_width="443dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.44"
+            android:text="The Overall Pros"
+            android:textSize="25dp"
+            android:textColor="@color/colorBlack"
+            />
 
+        <TextView
+            android:id="@+id/prosDescription"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.523" />
+
+        <TextView
+            android:layout_width="433dp"
+            android:layout_height="38dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615"
+            android:text="Recommendations:"
+            android:textSize="25dp"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/prosRecommendation"
+            android:layout_width="411dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="320dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.541" />
+
+        <TextView
+            android:layout_width="433dp"
+            android:layout_height="38dp"
+            android:text="Spots you dont want to miss:"
+            android:textColor="@color/colorBlack"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.806" />
+
+        <TextView
+            android:id="@+id/prosMustVisit"
+            android:layout_width="412dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="320dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.939" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

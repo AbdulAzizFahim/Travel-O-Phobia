@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAppBackground"
+    android:background="#7AE9F1F1"
     android:orientation="vertical"
     tools:context=".Location_Cons">
 
@@ -17,14 +17,14 @@
 
         <ImageView
             android:id="@+id/consSignView"
-            android:src="@mipmap/ic_launcher"
-            android:scaleType="fitXY"
             android:layout_width="400dp"
-            android:layout_height="207dp"
+            android:layout_height="265dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="616dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.555"
@@ -52,18 +52,91 @@
 
 
         <TextView
-            android:id="@+id/consDescription"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginTop="380dp"
+            android:layout_width="443dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="20dp"
+            android:text="The Overall Cons"
             android:textColor="@color/colorBlack"
             android:textSize="25dp"
-            android:textAlignment="center"
-            android:paddingTop="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.44" />
+
+        <TextView
+            android:id="@+id/consDescription"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.523" />
+
+        <TextView
+            android:layout_width="433dp"
+            android:layout_height="38dp"
+            android:text="Not Recommended:"
+            android:textColor="@color/colorBlack"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <TextView
+            android:id="@+id/consNotRecommended"
+            android:layout_width="411dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="320dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.541" />
+
+        <TextView
+            android:layout_width="433dp"
+            android:layout_height="38dp"
+            android:text="Stay Alert About:"
+            android:textColor="@color/colorBlack"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.806" />
+
+        <TextView
+            android:id="@+id/consStayAlert"
+            android:layout_width="412dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="320dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.939" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorAppBackground"
+        android:background="#7AEAEFEF"
         android:baselineAligned="false"
         android:orientation="vertical">
 
@@ -48,52 +48,52 @@
             android:id="@+id/Pros_Button"
             android:layout_width="200dp"
             android:layout_height="40dp"
-            android:background="@drawable/button_round"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:textColor="#ffffff"
-            android:text="Pros" />
+            android:background="@drawable/button_round"
+            android:text="Pros"
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/Cons_Button"
             android:layout_width="200dp"
             android:layout_height="40dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_round"
-            android:layout_gravity="center"
-            android:textColor="#ffffff"
-            android:text="Cons" />
+            android:text="Cons"
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/Trip_Review_Button"
             android:layout_width="200dp"
             android:layout_height="40dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_round"
-            android:layout_gravity="center"
-            android:textColor="#ffffff"
-            android:text="Trip Review" />
+            android:text="Trip Review"
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/Bus_Reserve_Button"
             android:layout_width="200dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:background="@drawable/button_round"
-            android:textColor="#ffffff"
-            android:text="Bus Reservation" />
+            android:text="Bus Reservation"
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/Hotel_Book_Button"
             android:layout_width="200dp"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button_round"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:textColor="#ffffff"
-            android:text="Book Hotel" />
+            android:background="@drawable/button_round"
+            android:text="Book Hotel"
+            android:textColor="#ffffff" />
 
     </LinearLayout>
 

@@ -10,37 +10,37 @@ import android.os.Bundle;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MainActivity extends AppCompatActivity implements exampleAdapter.OnNoteListener
+public class Review extends AppCompatActivity
 {
     RecyclerView recview;
-    exampleAdapter adapter;
-    String name,pass;
+    ReviewAdapter adapter;
+    String place,name;
+    String special;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_review);
+
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null){
 
             name = bundle.getString("name");
-
+            place = bundle.getString("place");
+            special = bundle.getString("where");
         }
+
 
         recview=(RecyclerView)findViewById(R.id.recyclerView);
         recview.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<modelC> options =
-                new FirebaseRecyclerOptions.Builder<modelC>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Country"), modelC.class)
+        FirebaseRecyclerOptions<modelR> options =
+                new FirebaseRecyclerOptions.Builder<modelR>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child(special), modelR.class)
                         .build();
 
 
-        adapter = new exampleAdapter(options,this);
+        adapter = new ReviewAdapter(options);
         recview.setAdapter(adapter);
-
-
-
-
 
     }
 
@@ -56,11 +56,4 @@ public class MainActivity extends AppCompatActivity implements exampleAdapter.On
         adapter.stopListening();
     }
 
-    @Override
-    public void onNoteClick(int position) {
-        Intent intent = new Intent(this,Locations.class);
-        intent.putExtra("name" , name);
-        startActivity(intent);
-
-    }
 }
